@@ -1,0 +1,6 @@
+com\ayospringboot\test\dto\ConvertedUnit.class
+com\ayospringboot\test\controller\RestServiceController.class
+com\ayospringboot\test\dto\UnitsModel.class
+com\ayospringboot\test\controller\RestServiceController$UnitNotFoundException.class
+com\ayospringboot\test\repository\UnitsRepository.class
+com\ayospringboot\test\RestApiApplication.class
