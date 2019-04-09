@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Login Page</title>
+</head>
+<h1>Online Units Conversion</h1>
+<!--p><a href="#/login">Logout</a></a></p-->
+<body ng-app="test">
+<hr/>
+<div class="container" ng-controller="UserController">
+    <div class="row">
+    	<label class="formlabel pull-left">Select Conversion</label>
+    		<select ng-model="UserController" f-model="allUnitsDto.description" ng-options="i as i for i in allUnits"></select>
+        	<input type="text" name="unitId" ng-model="unitId" class="input-sm spacing/>
+    	<label class="formlabel pull-left">Unit value </label> 
+	    <input type="number" name="unitValue" ng-model="unitValue" ng-list class="input-sm custom-width spacing"/></div>
+    	<button ng-click="convertUnit(unitId, unitValue)" class="btn btn-sm btn-info">Convert</button> </div> 
+    <hr/>
+    <div class="row"></div>
+    <hr/>
+    <div class="row" ng-repeat="converted in unitDto">
+        <div class="">
+            <h3>{{converted.description}}</h3>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/UserController.js"></script>
+<script src="js/app/UserService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>

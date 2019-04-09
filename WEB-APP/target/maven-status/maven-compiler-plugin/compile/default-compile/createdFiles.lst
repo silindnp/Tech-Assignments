@@ -1,0 +1,4 @@
+com\ayospringbootwebapp\test\WebAppApplication.class
+com\ayospringbootwebapp\test\controller\UnitsController.class
+com\ayospringbootwebapp\test\service\RestClientUnitConvService.class
+com\ayospringbootwebapp\test\dto\UnitDto.class

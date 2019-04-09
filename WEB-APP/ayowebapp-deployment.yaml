@@ -1,0 +1,40 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+name: ayowebapp
+spec:
+replicas: 3
+strategy:
+rollingUpdate:
+maxSurge: 1
+maxUnavailable: 1
+minReadySeconds: 5
+template:
+metadata:
+labels:
+app: ayowebapp
+spec:
+containers:
+- name: ayowebapp
+image: AyoApp/ayowebapp:1.0
+ports:
+- containerPort: 80
+resources:
+requests:
+cpu: 250m
+limits:
+cpu: 500m
+env:
+- name: DB_ENDPOINT
+value: "AyoTestDB"
+---
+apiVersion: v1
+kind: Service
+metadata:
+name: ayowebapp
+spec:
+type: LoadBalancer
+ports:
+- port: 80
+selector:
+app: ayowebapp
