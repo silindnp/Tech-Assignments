@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
+<script src="/js/lib/angular.min.js"></script>
 <head>
     <meta charset="ISO-8859-1">
-    <title>Login Page</title>
+    <title>Main Page</title>
 </head>
 <h1>Online Units Conversion</h1>
 <!--p><a href="#/login">Logout</a></a></p-->
-<body ng-app="test">
+<body>
 <hr/>
-<div class="container" ng-controller="UserController">
+<div class="container" ng-app="test" ng-controller="UserController">
     <div class="row">
-    	<label class="formlabel pull-left">Select Conversion</label>
-    		<select ng-model="UserController" f-model="allUnitsDto.description" ng-options="i as i for i in allUnits"></select>
-        	<input type="text" name="unitId" ng-model="unitId" class="input-sm spacing/>
+    	<label class="formlabel pull-left">Select</label>
+		<select ng-model="selectedUnit" class="input-sm custom-width spacing">
+		  <option value="">Select unit conversion</option>
+		  <option ng-repeat="unit in AllUnits" ng-value="unit">{{unit}}</option>
+		</select> 
+        	<!-- input type="text" name="unitId" ng-model="unitId" class="input-sm spacing" /-->
     	<label class="formlabel pull-left">Unit value </label> 
-	    <input type="number" name="unitValue" ng-model="unitValue" ng-list class="input-sm custom-width spacing"/></div>
-    	<button ng-click="convertUnit(unitId, unitValue)" class="btn btn-sm btn-info">Convert</button> </div> 
+	    <input type="number" name="unitValue" ng-model="unitValue" class="input-sm custom-width spacing"/>
+    	<button ng-click="convertUnit()">Convert</button> 
+    </div>
     <hr/>
     <div class="row"></div>
     <hr/>
-    <div class="row" ng-repeat="converted in unitDto">
+    <div class="row">
         <div class="">
-            <h3>{{converted.description}}</h3>
+            <h3>{{converted}}</h3>
         </div>
     </div>
 </div>
 </body>
-<script src="js/lib/angular.min.js"></script>
-<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-<script src="js/app/app.js"></script>
-<script src="js/app/UserController.js"></script>
-<script src="js/app/UserService.js"></script>
-<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
-<link rel="stylesheet" href="css/app/app.css"/>
+<script src="/js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="/js/app/app.js"></script>
+<script src="/js/app/UserController.js"></script>
+<script src="/js/app/UserService.js"></script>
+<link rel="stylesheet" href="/css/lib/bootstrap.min.css"></link>
+<link rel="stylesheet" href="/css/app/app.css"></link>
 </html>

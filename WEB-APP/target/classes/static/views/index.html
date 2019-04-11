@@ -5,10 +5,9 @@
     <title>Login Page</title>
 </head>
 <h1>Online Units Conversion</h1>
-<!--p><a href="#/login">Logout</a></a></p-->
-<body ng-app="test">
+<body>
 <hr/>
-<div class="container" ng-controller="UserController">
+<div class="container" ng-app="test" ng-controller="UserController">
     <div class="form-group">
     	<label class="formlabel pull-left">UserName</label>
     	<i class="fa fa-key"></i>
@@ -24,17 +23,17 @@
 	    <input type="password" name="password" id="password" ng-model="password" class="input-sm spacing" required /></div>
     </div>
     <div class="form-actions"> 
-    	<button ng-click="getUserById()" class="btn btn-sm btn-info">Login</button> </div> 
+    	<button ng-click="getUserById()">Login</button> </div> 
     <hr/>
     <div class="row"></div>
     <hr/>
 </div>
 </body>
-<script src="js/lib/angular.min.js"></script>
-<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
-<script src="js/app/app.js"></script>
-<script src="js/app/UserController.js"></script>
-<script src="js/app/UserService.js"></script>
-<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
-<link rel="stylesheet" href="css/app/app.css"/>
+<script src="/js/lib/angular.min.js"></script>
+<script src="/js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="/js/app/app.js"></script>
+<script src="/js/app/UserController.js"></script>
+<script src="/js/app/UserService.js"></script>
+<link rel="stylesheet" href="/css/lib/bootstrap.min.css"></link>
+<link rel="stylesheet" href="/css/app/app.css"></link>
 </html>

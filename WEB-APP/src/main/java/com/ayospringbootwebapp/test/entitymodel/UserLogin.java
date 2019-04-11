@@ -1,4 +1,4 @@
-package com.ayospringbootwebapp.test.entitymodel; 
+/*package com.ayospringbootwebapp.test.entitymodel; 
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -83,4 +83,4 @@ public class UserLogin {
        + "]";
     }
  
-}
+}*/

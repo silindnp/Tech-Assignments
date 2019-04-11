@@ -11,10 +11,11 @@ angular.module('test.services', []).factory('UserService',
 				return $http.get(CONSTANTS.getAvailUnitsUrl);
 			}
 			service.getUnitById = function(unitId) {
-				return $http.post(CONSTANTS.getUnitByIdUrl + unitId);
+				return $http.get(CONSTANTS.getUnitByIdUrl + unitId);
+				//return $http.post(CONSTANTS.getUnitByIdUrl + unitId);
 			}
-			service.convertUnit = function(unitId,unitValue) {
-				return $http.post(CONSTANTS.convertUnitUrl + unitValue + "/" + unitId);
+			service.convertUnit = function(unitValue,unitId) {
+				return $http.get(CONSTANTS.convertUnitUrl + unitValue + "/" + unitId);
 			}
 			//alert("Called");
 			return service;
